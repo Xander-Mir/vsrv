@@ -4,9 +4,9 @@
 #define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
 
 bool simple(int num){ // функция возвращает 1 если число простое, 0 если нет
-	if (num <= 1) return false;   // 0, 1, отрицательные — не простые
-    if (num <= 3) return true;    // 2 и 3 — простые
-    if (num % 2 == 0) return false;  // чётные > 2 — не простые
+	if (num <= 1) return false; 
+    if (num <= 3) return true;    
+    if (num % 2 == 0) return false;  
 	for(int i=3; (long long)i*i<=num; i+=2){
 		if(num%i==0){
 			return false;
