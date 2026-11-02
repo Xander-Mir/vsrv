@@ -19,7 +19,6 @@ int main() {
 //организуем непрерывный цикл для обмена сообщениями
    fd = open(FIFO_FILE, O_RDONLY);
    while(1) {
-      
 //открываем FIFO файл для чтения
       read_bytes = read(fd, readbufNew, sizeof(readbufNew));
       readbufNew[read_bytes] = '\0';
