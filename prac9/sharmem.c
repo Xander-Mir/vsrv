@@ -19,7 +19,7 @@ int main() {
         //Дочерний процесс: чтение разделяемой памяти
         char *shared_mem = (char*)mmap(0, SIZE, PROT_READ, MAP_SHARED, shm_fd, 0);
         printf("Child read: ");
-        printf("%s",shared_mem);
+        printf("%s\n",shared_mem);
         munmap(shared_mem, SIZE);
     } else {
         //Процесс родитель: запись в разделяемую память
